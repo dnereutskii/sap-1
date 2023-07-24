@@ -50,7 +50,7 @@ CON = Cp|Ep|Lm_N|CE_N|Li_N|Ei_N|La_N|Ea|Su|Eu|Lb_N|Lo_N
 
 ## Execute microintsructions
 
-  #   | Macro | State |  CON  |   Active
+  No  | Macro | State |  CON  | Active
 :----:|-------|-------|-------|------------
  1    | LDA   | T4    | 1A3H  | Lm_N, Ei_N
       |       | T5    | 2C3H  | CE_N, La_N
