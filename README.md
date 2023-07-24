@@ -50,20 +50,20 @@ CON = Cp|Ep|Lm_N|CE_N|Li_N|Ei_N|La_N|Ea|Su|Eu|Lb_N|Lo_N
 
 ## Execute microintsructions
 
-  #   |Macro | State |  CON  |   Active
-:----:|------|-------|-------|------------
- 1    | LDA  | T4    | 1A3H  | Lm_N, Ei_N
-      |      | T5    | 2C3H  | CE_N, La_N
-      |      | T6    | 3E3H  | NOP
- 2    | ADD  | T4    | 1A3H  | Lm_N, Ei_N
-      |      | T5    | 2E1H  | CE_N, Lb_N
-      |      | T6    | 3C7H  | La_N, Eu
- 3    | SUB  | T4    | 1A3H  | Lm_N, Ei_N
-      |      | T5    | 2E1H  | CE_N, Lb_N
-      |      | T6    | 3CFH  | La_N, Su, Eu
- 4    | OUT  | T4    | 3F2H  | Ea, Lo_N
-      |      | T5    | 3E3H  | NOP
-      |      | T6    | 3E3H  | NOP
+  #   | Macro | State |  CON  |   Active
+:----:|-------|-------|-------|------------
+ 1    | LDA   | T4    | 1A3H  | Lm_N, Ei_N
+      |       | T5    | 2C3H  | CE_N, La_N
+      |       | T6    | 3E3H  | NOP
+ 2    | ADD   | T4    | 1A3H  | Lm_N, Ei_N
+      |       | T5    | 2E1H  | CE_N, Lb_N
+      |       | T6    | 3C7H  | La_N, Eu
+ 3    | SUB   | T4    | 1A3H  | Lm_N, Ei_N
+      |       | T5    | 2E1H  | CE_N, Lb_N
+      |       | T6    | 3CFH  | La_N, Su, Eu
+ 4    | OUT   | T4    | 3F2H  | Ea, Lo_N
+      |       | T5    | 3E3H  | NOP
+      |       | T6    | 3E3H  | NOP
 
 ## Program examples
 
