@@ -5,6 +5,12 @@
 Simple as possible 1 (SAP-1) computer designed for educational purposes by A.P. Malvino. 
 SAP-1 has an instruction set that is a subset of the 8080/8085 microprocessor instructions.
 
+## Using
+
+The model was tested by [Logisim 2.7.1](http://www.cburch.com/logisim/download.html).
+After firing up the sap-1.circ file, You need to load a program from the program
+folder to the RAM by selecting the "load image" item.
+
 ## Architecture
 
 ### Block list
@@ -34,15 +40,29 @@ Every instruction devides on operation code (high nibble) and address field (low
 
 ## Fetch microinstructions
 
-Macro | State |  CON  |   Active
-------|-------|-------|------------
- LDA  | T4    | 1A3H  | Lm_N, Ei_N
-      | T5    | 2C3H  | CE_N, La_N
-      | T6    | 3E3H  | NOP
+ State     | Ref   | CON   | Active
+-----------|-------|-------|-----------
+ address   | T1    | 5E3H  | Ep, Lm_N
+ increment | T2    | BE3H  | Cp
+ memory    | T3    | 263H  | CE_N, Li_N
+
 
 ## Execute microintsructions
 
-
+  #   |Macro | State |  CON  |   Active
+:----:|------|-------|-------|------------
+ 1    | LDA  | T4    | 1A3H  | Lm_N, Ei_N
+      |      | T5    | 2C3H  | CE_N, La_N
+      |      | T6    | 3E3H  | NOP
+ 2    | ADD  | T4    | 1A3H  | Lm_N, Ei_N
+      |      | T5    | 2E1H  | CE_N, Lb_N
+      |      | T6    | 3C7H  | La_N, Eu
+ 3    | SUB  | T4    | 1A3H  | Lm_N, Ei_N
+      |      | T5    | 2E1H  | CE_N, Lb_N
+      |      | T6    | 3CFH  | La_N, Su, Eu
+ 4    | OUT  | T4    | 3F2H  | Ea, Lo_N
+      |      | T5    | 3E3H  | NOP
+      |      | T6    | 3E3H  | NOP
 
 ## Program examples
 
