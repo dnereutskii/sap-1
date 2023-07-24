@@ -46,6 +46,7 @@ Every instruction devides on operation code (high nibble) and address field (low
  increment | T2    | BE3H  | Cp
  memory    | T3    | 263H  | CE_N, Li_N
 
+CON = Cp|Ep|Lm_N|CE_N|Li_N|Ei_N|La_N|Ea|Su|Eu|Lb_N|Lo_N
 
 ## Execute microintsructions
 
