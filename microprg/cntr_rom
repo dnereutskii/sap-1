@@ -1,0 +1,16 @@
+v2.0 raw
+5e3 #0H:Fetch 
+be3 #1H
+263 #2H
+1a3 #3H:LDA
+2c3 #4H
+3e3 #5H
+1a3 #6H:ADD
+2e1 #7H
+3c7 #8H
+1a3 #9H:SUB
+2e1 #AH
+3cf #BH
+3f2 #CH:OUT
+3e3 #DH
+3e3 #EH
